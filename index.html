@@ -25,11 +25,30 @@
   <h1>Welcome to Genet Support</h1>
   <p>If you have any questions, feel free to ask our chatbot in the bottom right corner.</p>
 
-  <df-messenger
-    intent="WELCOME"
-    chat-title="Genet_Support"
-    agent-id="0b10be7c-a259-46c4-926c-ab1454e4e72e"
-    language-code="en"
-  ></df-messenger>
+<link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+<script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+<df-messenger
+  location="us-central1"
+  project-id="genetbot"
+  agent-id="b175d320-b25b-42c2-a4c2-619ad978b33d"
+  language-code="en"
+  max-query-length="-1">
+  <df-messenger-chat-bubble
+    chat-title="Airline Support">
+  </df-messenger-chat-bubble>
+</df-messenger>
+<style>
+  df-messenger {
+    z-index: 999;
+    position: fixed;
+    --df-messenger-font-color: #000;
+    --df-messenger-font-family: Google Sans;
+    --df-messenger-chat-background: #f3f6fc;
+    --df-messenger-message-user-background: #d3e3fd;
+    --df-messenger-message-bot-background: #fff;
+    bottom: 16px;
+    right: 16px;
+  }
+</style>
 </body>
 </html>
